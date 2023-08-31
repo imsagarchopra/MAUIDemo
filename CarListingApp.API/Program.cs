@@ -1,3 +1,6 @@
+using Microsoft.Data.Sqlite;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -8,6 +11,11 @@ builder.Services.AddCors(o =>
 {
     o.AddPolicy("AllowAll", a => a.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod());
 });
+
+var dbPath = Path.Join(Directory.GetCurrentDirectory(),"carList.db");
+var conn = new SqliteConnection($"Data Source={dbPath}");
+
+builder.Services.AddDbContext<CarListDbContext>(o => o.UseSqlite(conn));
 
 var app = builder.Build();
 

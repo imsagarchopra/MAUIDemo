@@ -5,7 +5,9 @@ VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToDoListApp", "ToDoListApp\ToDoListApp.csproj", "{0C34949F-AF49-4EEF-A90D-E12205001B83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarListingApp", "CarListingApp\CarListingApp.csproj", "{1E3BEB6F-DA9A-4E87-8DCA-E9528F8F927D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarListingApp", "CarListingApp\CarListingApp.csproj", "{1E3BEB6F-DA9A-4E87-8DCA-E9528F8F927D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarListingApp.API", "CarListingApp.API\CarListingApp.API.csproj", "{D809F100-00AE-4436-ADAA-F4099444A2EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +27,10 @@ Global
 		{1E3BEB6F-DA9A-4E87-8DCA-E9528F8F927D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E3BEB6F-DA9A-4E87-8DCA-E9528F8F927D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1E3BEB6F-DA9A-4E87-8DCA-E9528F8F927D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{D809F100-00AE-4436-ADAA-F4099444A2EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D809F100-00AE-4436-ADAA-F4099444A2EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D809F100-00AE-4436-ADAA-F4099444A2EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D809F100-00AE-4436-ADAA-F4099444A2EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

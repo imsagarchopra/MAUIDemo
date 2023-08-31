@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace CarListingApp.Services
 {
-    public class CarService
+    public class CarDatabaseService
     {
         SQLiteConnection conn;
         string _dbPath;
         public string StatusMessage;
         int result = 0;
-        public CarService(string dbPath)
+        public CarDatabaseService(string dbPath)
         {
             _dbPath = dbPath;
         }

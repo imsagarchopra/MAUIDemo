@@ -17,10 +17,12 @@ namespace CarListingApp.ViewModels
     {
         const string editButtonText = "Update Car";
         const string createButtonText = "Add Car";
+        private readonly CarApiService _carApiService;
         public ObservableCollection<Car> Cars { get; private set; } = new();
 
-        public CarListViewModel()
+        public CarListViewModel(CarApiService carApiService)
         {
+            _carApiService = carApiService;
             Title = "Car List";
             AddEditButtonText = createButtonText;
             GetCarList().Wait();
@@ -48,8 +50,10 @@ namespace CarListingApp.ViewModels
                 IsBusy = true;
                 if (Cars.Any()) Cars.Clear();
 
-                var cars = App.CarService.GetCars();
+                //var cars = App.CarDatabaseService.GetCars();
 
+                var cars = new List<Car>();
+                cars = await _carApiService.GetCars();
                 foreach (var car in cars) Cars.Add(car);
             }
             catch (Exception ex)
@@ -91,13 +95,13 @@ namespace CarListingApp.ViewModels
             if (CarId != 0)
             {
                 car.Id = CarId;
-                App.CarService.UpdateCar(car);
-                await Shell.Current.DisplayAlert("Info", App.CarService.StatusMessage, "Ok");
+                App.CarDatabaseService.UpdateCar(car);
+                await Shell.Current.DisplayAlert("Info", App.CarDatabaseService.StatusMessage, "Ok");
             }
             else
             {
-                App.CarService.AddCar(car);
-                await Shell.Current.DisplayAlert("Info", App.CarService.StatusMessage, "Ok");
+                App.CarDatabaseService.AddCar(car);
+                await Shell.Current.DisplayAlert("Info", App.CarDatabaseService.StatusMessage, "Ok");
             }
 
             await GetCarList();
@@ -112,7 +116,7 @@ namespace CarListingApp.ViewModels
                 await Shell.Current.DisplayAlert("Invalid Record", "Please try again", "Ok");
                 return;
             }
-            var result = App.CarService.DeleteCar(id);
+            var result = App.CarDatabaseService.DeleteCar(id);
             if (result == 0) await Shell.Current.DisplayAlert("Failed", "Please insert valid data", "Ok");
             else
             {
@@ -133,7 +137,7 @@ namespace CarListingApp.ViewModels
         {
             AddEditButtonText = editButtonText;
             CarId = id;
-            var car = App.CarService.GetCar(id);
+            var car = App.CarDatabaseService.GetCar(id);
             Make = car.Make;
             Model = car.Model;
             Vin = car.Vin;

@@ -24,8 +24,12 @@ namespace CarListingApp
 
             builder.Services.AddSingleton<CarListViewModel>();
             builder.Services.AddTransient<CarDetailsViewModel>();
+            builder.Services.AddSingleton<LoadingPageViewModel>();
+            builder.Services.AddSingleton<LoginPageViewModel>();
 
             builder.Services.AddSingleton<MainPage>();
+            builder.Services.AddSingleton<LoadingPage>();
+            builder.Services.AddSingleton<LoginPage>();
             builder.Services.AddTransient<CarDetailsPage>();
 
             return builder.Build();

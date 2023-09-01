@@ -1,6 +1,7 @@
 ﻿using CarListingApp.Views;
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,8 +24,22 @@ namespace CarListingApp.ViewModels
             {
                 await GoToLoginPage();
             }
-            
-            //Evaluate token and decide if it is valid
+            else
+            {
+                //Evaluate token and decide if it is valid
+                var jsonToken = new JwtSecurityTokenHandler().ReadToken(token) as JwtSecurityToken;
+
+                if(jsonToken.ValidTo < DateTime.UtcNow)
+                {
+                    SecureStorage.Remove("Token");
+                    await GoToLoginPage();
+                }
+                else
+                {
+                    await GoToMainPage();
+                }
+            }
+
 
 
         }

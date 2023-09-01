@@ -17,12 +17,12 @@ namespace CarListingApp.ViewModels
     {
         const string editButtonText = "Update Car";
         const string createButtonText = "Add Car";
-        private readonly CarApiService _carApiService;
+        private readonly CarDatabaseService _carDatabaseService;
         public ObservableCollection<Car> Cars { get; private set; } = new();
 
-        public CarListViewModel(CarApiService carApiService)
+        public CarListViewModel(CarDatabaseService carDatabaseService)
         {
-            _carApiService = carApiService;
+            _carDatabaseService = carDatabaseService;
             Title = "Car List";
             AddEditButtonText = createButtonText;
             GetCarList().Wait();
@@ -50,10 +50,10 @@ namespace CarListingApp.ViewModels
                 IsBusy = true;
                 if (Cars.Any()) Cars.Clear();
 
-                //var cars = App.CarDatabaseService.GetCars();
+                var cars = App.CarDatabaseService.GetCars();
 
-                var cars = new List<Car>();
-                cars = await _carApiService.GetCars();
+                //var cars = new List<Car>();
+                //cars = await _carDatabaseService.GetCars();
                 foreach (var car in cars) Cars.Add(car);
             }
             catch (Exception ex)

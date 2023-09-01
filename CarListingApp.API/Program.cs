@@ -1,4 +1,5 @@
 using CarListingApp.API;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,6 +16,9 @@ builder.Services.AddCors(o => {
 var conn = new SqliteConnection($"Data Source=C:\\carlistdb\\carlist.db");
 builder.Services.AddDbContext<CarListDbContext>(o => o.UseSqlite(conn));
 
+builder.Services.AddIdentityCore<IdentityUser>()
+    .AddRoles<IdentityRole>()
+    .AddEntityFrameworkStores<CarListDbContext>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -64,5 +68,31 @@ app.MapPost("/cars", async (Car car, CarListDbContext db) => {
 
 });
 
+app.MapPost("/login", async (LoginDto loginDto, CarListDbContext db, UserManager<IdentityUser> _userManager) => {
+    var user = await _userManager.FindByNameAsync(loginDto.Username);
 
+    if(user is null)
+    {
+        return Results.Unauthorized();
+    }
+
+    var isValidPassword = await _userManager.CheckPasswordAsync(user, loginDto.Password);
+
+    if(!isValidPassword)
+    {
+        return Results.Unauthorized();
+    }
+
+    //Generate Access Token
+
+    var response = new AuthResponseDto
+    {
+        UserId = user.Id,
+        Username = user.UserName,
+        Token = "AccessTokenHere"
+    };
+
+    return Results.Ok(response);
+
+});
 app.Run();

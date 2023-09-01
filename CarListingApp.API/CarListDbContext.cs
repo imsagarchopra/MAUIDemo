@@ -1,10 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Reflection.Emit;
 
 namespace CarListingApp.API
 {
-    public class CarListDbContext : DbContext
+    public class CarListDbContext : IdentityDbContext
     {
         public CarListDbContext(DbContextOptions<CarListDbContext> options) : base(options)
         {

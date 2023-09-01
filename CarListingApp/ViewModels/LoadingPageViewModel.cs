@@ -1,8 +1,11 @@
-﻿using CarListingApp.Views;
+﻿using CarListingApp.Helpers;
+using CarListingApp.Models;
+using CarListingApp.Views;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -36,6 +39,16 @@ namespace CarListingApp.ViewModels
                 }
                 else
                 {
+
+                    var role = jsonToken.Claims.FirstOrDefault(q => q.Type.Equals(ClaimTypes.Role))?.Value;
+
+                    var userInfo = new UserInfo()
+                    {
+                        Username = jsonToken.Claims.FirstOrDefault(q => q.Type.Equals(ClaimTypes.Email))?.Value,
+                        Role = role
+                    };
+
+                    MenuBuilder.BuildMenu();
                     await GoToMainPage();
                 }
             }

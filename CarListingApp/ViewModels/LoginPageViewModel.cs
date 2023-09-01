@@ -1,4 +1,5 @@
-﻿using CarListingApp.Models;
+﻿using CarListingApp.Helpers;
+using CarListingApp.Models;
 using CarListingApp.Services;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
@@ -68,6 +69,7 @@ namespace CarListingApp.ViewModels
                     App.UserInfo = userInfo;
 
                     //Navigate to App Main Page.
+                    MenuBuilder.BuildMenu(); 
                     await Shell.Current.GoToAsync(nameof(MainPage));
                 }
                 else

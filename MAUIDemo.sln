@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerfectPay", "PerfectPay\Pe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeQuotes", "CodeQuotes\CodeQuotes.csproj", "{B8192F38-74CA-4C98-9968-A1DFBBB47A02}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hangman", "Hangman\Hangman.csproj", "{DB573A51-88F8-4F2B-9787-33C35EC15496}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,12 @@ Global
 		{B8192F38-74CA-4C98-9968-A1DFBBB47A02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8192F38-74CA-4C98-9968-A1DFBBB47A02}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B8192F38-74CA-4C98-9968-A1DFBBB47A02}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{DB573A51-88F8-4F2B-9787-33C35EC15496}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB573A51-88F8-4F2B-9787-33C35EC15496}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB573A51-88F8-4F2B-9787-33C35EC15496}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DB573A51-88F8-4F2B-9787-33C35EC15496}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB573A51-88F8-4F2B-9787-33C35EC15496}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB573A51-88F8-4F2B-9787-33C35EC15496}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

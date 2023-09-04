@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToDoListApp", "ToDoListApp\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarListingApp", "CarListingApp\CarListingApp.csproj", "{1E3BEB6F-DA9A-4E87-8DCA-E9528F8F927D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarListingApp.API", "CarListingApp.API\CarListingApp.API.csproj", "{AEA33F29-448D-496B-BA7F-4EB7B2CF8652}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarListingApp.API", "CarListingApp.API\CarListingApp.API.csproj", "{AEA33F29-448D-496B-BA7F-4EB7B2CF8652}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorMaker", "ColorMaker\ColorMaker.csproj", "{F81DA315-99FD-4A02-BB51-BC2725727F9B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,12 @@ Global
 		{AEA33F29-448D-496B-BA7F-4EB7B2CF8652}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEA33F29-448D-496B-BA7F-4EB7B2CF8652}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEA33F29-448D-496B-BA7F-4EB7B2CF8652}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F81DA315-99FD-4A02-BB51-BC2725727F9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F81DA315-99FD-4A02-BB51-BC2725727F9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F81DA315-99FD-4A02-BB51-BC2725727F9B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F81DA315-99FD-4A02-BB51-BC2725727F9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F81DA315-99FD-4A02-BB51-BC2725727F9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F81DA315-99FD-4A02-BB51-BC2725727F9B}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

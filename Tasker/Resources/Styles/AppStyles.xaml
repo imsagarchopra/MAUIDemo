@@ -30,11 +30,11 @@
 	</Style>
 
 	<Shadow
-        x:Key="shadow"
-        Brush="#CFD0D4"
-        Opacity="0.6"
-        Radius="15"
-        Offset="10,15" />
+		x:Key="shadow"
+		Brush="#CFD0D4"
+		Opacity="0.6"
+		Radius="15"
+		Offset="10,15" />
 
 	<Style TargetType="RoundRectangle">
 		<Setter Property="CornerRadius" Value="10" />
@@ -52,10 +52,10 @@
 	</Style>
 
 	<EllipseGeometry
-        x:Key="circle"
-        Center="50,50"
-        RadiusX="30"
-        RadiusY="30"/>
+		x:Key="circle"
+		Center="50,50"
+		RadiusX="30"
+		RadiusY="30" />
 
 	<Style x:Key="CircularButton" TargetType="Button">
 		<Setter Property="FontAttributes" Value="Bold" />
@@ -64,8 +64,7 @@
 		<Setter Property="WidthRequest" Value="100" />
 		<Setter Property="VerticalOptions" Value="End" />
 		<Setter Property="HorizontalOptions" Value="End" />
-		<Setter Property="Clip" Value="{StaticResource circle}"/>
+		<Setter Property="Clip" Value="{StaticResource circle}" />
 	</Style>
 
 </ResourceDictionary>
-    

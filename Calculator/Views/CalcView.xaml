@@ -19,14 +19,15 @@
 				RowDefinitions="*,*,*,*,*"
 				RowSpacing="15">
 				<!--#region Row 1-->
-				<Button Style="{StaticResource YellowButton}"
-						Text="AC"
-						Command="{Binding ResetCommand}"/>
+				<Button
+					Command="{Binding ResetCommand}"
+					Style="{StaticResource YellowButton}"
+					Text="AC" />
 				<Button
 					Grid.Column="1"
+					Command="{Binding BackspaceCommand}"
 					Style="{StaticResource YellowButton}"
-					Text="⌫"
-					Command="{Binding BackspaceCommand}"/>
+					Text="⌫" />
 				<Button
 					Grid.Column="2"
 					Command="{Binding OperationCommand}"
@@ -138,9 +139,9 @@
 				<Button
 					Grid.Row="4"
 					Grid.Column="3"
+					Command="{Binding CalculateCommand}"
 					Style="{StaticResource RedButton}"
-					Text="="
-					Command="{Binding CalculateCommand}"/>
+					Text="=" />
 				<!--#endregion-->
 			</Grid>
 		</Grid>

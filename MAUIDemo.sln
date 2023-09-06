@@ -23,6 +23,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitConverter", "UnitConver
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Calculator.csproj", "{70C77A67-045A-457B-82FB-54E812BD8C40}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasker", "Tasker\Tasker.csproj", "{6CC77801-5FCE-4C5F-95C1-16055182580E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,12 @@ Global
 		{70C77A67-045A-457B-82FB-54E812BD8C40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70C77A67-045A-457B-82FB-54E812BD8C40}.Release|Any CPU.Build.0 = Release|Any CPU
 		{70C77A67-045A-457B-82FB-54E812BD8C40}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6CC77801-5FCE-4C5F-95C1-16055182580E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CC77801-5FCE-4C5F-95C1-16055182580E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CC77801-5FCE-4C5F-95C1-16055182580E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{6CC77801-5FCE-4C5F-95C1-16055182580E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CC77801-5FCE-4C5F-95C1-16055182580E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CC77801-5FCE-4C5F-95C1-16055182580E}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

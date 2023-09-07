@@ -21,11 +21,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BMICalculator", "BMICalcula
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitConverter", "UnitConverter\UnitConverter.csproj", "{D63FCC17-2D1C-4AAC-8BB5-88700A8128E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Calculator.csproj", "{70C77A67-045A-457B-82FB-54E812BD8C40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator", "Calculator\Calculator.csproj", "{70C77A67-045A-457B-82FB-54E812BD8C40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasker", "Tasker\Tasker.csproj", "{6CC77801-5FCE-4C5F-95C1-16055182580E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tasker", "Tasker\Tasker.csproj", "{6CC77801-5FCE-4C5F-95C1-16055182580E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherForecastApp", "WeatherForecastApp\WeatherForecastApp.csproj", "{08F68097-28D5-4DE3-ACD6-EE5E4908F5D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherForecastApp", "WeatherForecastApp\WeatherForecastApp.csproj", "{08F68097-28D5-4DE3-ACD6-EE5E4908F5D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProsperDaily", "ProsperDaily\ProsperDaily.csproj", "{D10E311F-0102-41E8-A7F1-947E621AA103}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -103,6 +105,12 @@ Global
 		{08F68097-28D5-4DE3-ACD6-EE5E4908F5D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08F68097-28D5-4DE3-ACD6-EE5E4908F5D4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{08F68097-28D5-4DE3-ACD6-EE5E4908F5D4}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{D10E311F-0102-41E8-A7F1-947E621AA103}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D10E311F-0102-41E8-A7F1-947E621AA103}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D10E311F-0102-41E8-A7F1-947E621AA103}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D10E311F-0102-41E8-A7F1-947E621AA103}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D10E311F-0102-41E8-A7F1-947E621AA103}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D10E311F-0102-41E8-A7F1-947E621AA103}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
